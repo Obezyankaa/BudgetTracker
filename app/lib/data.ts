@@ -8,6 +8,7 @@ import {
   Revenue,
 } from './definitions';
 import { formatCurrency } from './utils';
+import { headers } from 'next/headers';
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
@@ -216,3 +217,22 @@ export async function fetchFilteredCustomers(query: string) {
     throw new Error('Failed to fetch customer table.');
   }
 }
+
+
+// export const getDataProject = async () => {
+//   const authToken =
+//     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5ODUxNTMzLCJpYXQiOjE3NTk3NjUxMzMsImp0aSI6IjllZTllNDhmNDFjYjQ2MTQ4ZDRjMjM2YzA0YTZjMDNmIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJhZG1pbiJ9.Sk4xKP0KCK70RzjXT2idWFyUxg2CQPMDJr8G6tAvfRE";
+//   try {
+//     const data = await fetch("http://localhost:8000/api/projects/list/", {
+//       method: 'GET',
+//       headers: {
+//     'Authorization': `Bearer ${authToken}`,
+//     'Content-Type': 'application/json' // Adjust content type as needed
+//   }
+//     });
+//     const res = await data.json();
+//     return res
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
