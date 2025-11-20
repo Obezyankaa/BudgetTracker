@@ -1,5 +1,8 @@
 {
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
   "window.autoDetectColorScheme": true,
   "workbench.preferredDarkColorTheme": "Default Dark Modern",
-  "workbench.preferredHighContrastColorTheme": "Default Light Modern"
+  "workbench.preferredHighContrastColorTheme": "Default Light Modern",
 }
